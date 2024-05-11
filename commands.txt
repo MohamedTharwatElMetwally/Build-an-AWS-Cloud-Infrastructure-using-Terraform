@@ -1,0 +1,31 @@
+$ terraform workspace new dev
+$ terraform workspace new prod
+$ terraform workspace list
+$ terraform workspace show 
+
+--------------------------------
+
+create s3 bucket for terraform backend.
+create dynamoDB table with LockID field as PK for managing the lock state.
+
+$ terraform init
+
+--------------------------------
+
+$ terraform workspace select dev
+
+$ terraform plan -var-file dev.tfvars
+$ terraform apply -var-file dev.tfvars
+
+$ terraform plan -destroy -var-file dev.tfvars
+$ terraform apply -destroy -var-file dev.tfvars
+
+--------------------------------
+
+$ terraform workspace select prod
+
+$ terraform plan -var-file prod.tfvars
+$ terraform apply -var-file prod.tfvars
+
+$ terraform plan -destroy -var-file prod.tfvars
+$ terraform apply -destroy -var-file prod.tfvars
