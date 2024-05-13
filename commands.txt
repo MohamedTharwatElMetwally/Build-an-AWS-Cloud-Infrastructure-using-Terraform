@@ -5,6 +5,7 @@ $ terraform workspace show
 
 --------------------------------
 
+First of all, set the credentials inside .aws dir.
 create s3 bucket for terraform backend.
 create dynamoDB table with LockID field as PK for managing the lock state.
 
